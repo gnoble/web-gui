@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row" style="margin:5em;">
+    <div class="col-md-4 col-lg-4 col-sm-4"></div>
+    <div class="col-md-4 col-lg-4 col-sm-4">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input ng-model="input.login" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="input.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me">
+            Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"  ng-click="login(input)">Sign in</button>
+      </form>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-4"></div>
+  </div>
+</div>

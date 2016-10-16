@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>:: Welcome to EffektMax :: </title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- google font -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css' />
+  <!-- Custom CSS -->
+  <link href="css/custom.css" rel="stylesheet" />
+  <link href="css/angular-toggle-switch.css" rel="stylesheet" />
+  <link href="css/angular-datepicker.css" rel="stylesheet" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-cookies.min.js"></script>
+  <script src="vendor/underscore/underscore-1.8.3/underscore.js"></script>
+  <script src="js/vendor/sortable.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <!-- For Hihgcharts-->
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/highcharts-more.js"></script>
+  <script src="http://code.highcharts.com/modules/solid-gauge.src.js"></script>
+  <script src="js/vendor/highcharts-ng.js"></script>
+  <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+  <script src="js/vendor/angular-toggle-switch.min.js"></script>
+  <!-- For DatePicker-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone-with-data.js"></script>
+  <script src="js/vendor/moment.js"></script>
+  <script src="js/vendor/angular-datepicker.js"></script>
+</head>
+
+<body ng-app="zwaveapp">
+  <header class="flw top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#" class="logo">
+            <img src="images/logo.png" />
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+          <ul class="topbar-header">
+             <li class="dropdown messages-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="icon"></span>
+              </a>
+			  <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <div class="slimScrollDiv" style="position: relative; overflow-x: hidden; overflow-y: scroll; width: auto; height: 200px;"><ul class="menu" style=" width: 100%; height: 225px;">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    AdminLTE Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                   <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                  <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 0px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+            </li>
+            <li class="dropdown messages-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="icon1"></span>
+              </a>
+			  <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <div class="slimScrollDiv" style="position: relative; overflow-x: hidden; overflow-y: scroll; width: auto; height: 200px;"><ul class="menu" style=" width: 100%; height: 225px;">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    AdminLTE Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                   <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                  <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 0px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+            </li>
+             <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="icon2"></span>
+              </a>
+			                 <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <div class="slimScrollDiv" style="position: relative; overflow-x: hidden; overflow-y: scroll; width: auto; height: 200px;"><ul class="menu" style=" width: 100%; height: 225px;">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    AdminLTE Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                   <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                  <img src="images/tick-icon.png" class="img-circle" alt="user image">
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 0px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li>
+            </li>
+
+            <li class="username-setting">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="images/user-profile.png" /> Lars Henrik</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-toggle="modal" data-target="#myaccount">My account</a></li>
+                <li><a href="#">Setting</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header End -->
+  <!-- inner section start -->
+  <section class="flw tab-section" ng-controller="tabs">
+    <div class="flw nav-link">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="top-navbar" role="tablist">
+              <li ng-class="{active: ((location.path() == '/main')|| !location.path()) }">
+                <a href="#main" role="tab" data-toggle="tab">
+                  <span class="icon1"></span>Dashboard</a>
+              </li>
+              <li ng-class="{active: location.path() == '/devices'}">
+                <a href="#devices" role="tab" data-toggle="tab">
+                  <span class="icon2"></span>System</a>
+              </li>
+              <li ng-class="{active: location.path() == '/energy'}">
+                <a href="#energy" role="tab" data-toggle="tab">
+                  <span class="icon3"></span>Energy chart</a>
+              </li>
+              <li ng-class="{active: location.path() == '/subcription'}">
+                <a href="#subcription" role="tab" data-toggle="tab">
+                  <span class="icon4"></span>Subscription</a>
+              </li>
+              <li ng-class="{active: location.path() == '/admin'}">
+                <a href="#admin" role="tab" data-toggle="tab">
+                  <span class="icon5"></span>Administrator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flw">
+      <div class="tab-content">
+        <div class="tab-pane active">
+          <ng-view>
+          </ng-view>
+        </div>
+      </div>
+	  </div>
+      <!-- Nav tabs -->
+      <!-- Tab panes -->
+  </section>
+  <section class="flw inner-content-section">
+  </section>
+  <!-- inner section End -->
+  <!-- footer Main Start-->
+  <footer class="flw footer-main">
+    <div class="flw">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h5>Menu</h5>
+                <ul>
+                  <li><a href="#tab1">Dashboard</a></li>
+                  <li><a href="#tab2">System</a></li>
+                  <li><a href="#tab3">Energy chart</a></li>
+                  <li><a href="#tab4">Subscription</a></li>
+                  <li><a href="#tab5">Administrator</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h5>About Us</h5>
+                <ul>
+                  <li><a href="#">How it works</a></li>
+                  <li><a href="#">Patterns</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Smartlab Hvaler AS</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h5>Technology</h5>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Patterns</a></li>
+                  <li><a href="#">Usage</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="https://goo.gl/1m4Blm">Min side FEN</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-4" ng-controller="contact">
+            <h5>Conatct Us</h5>
+            <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 footer-form">
+              <li>
+                <input type="text" class="form-control" placeholder="Name" ng-model="user" />
+              </li>
+              <li>
+                <input type="text" class="form-control" placeholder="Name" ng-model="topic" />
+              </li>
+              <li class="full-width">
+                <textarea class="form-control" placeholder="Please enter your message" ng-model="body"></textarea>
+              </li>
+              <li class="full-width">
+                <input type="submit" value="Send" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flw copyright-text">EffektMax &copy; SmartLab Hvaler AS. All rights reserved.</div>
+    <!-- #my account model dialog start here-->
+    <div class="modal fade" id="myaccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">My Account</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#user">User</a></li>
+              <li><a data-toggle="tab" href="#system">System</a></li>
+              <li><a data-toggle="tab" href="#charts">Charts</a></li>
+
+            </ul>
+
+            <div class="tab-content">
+              <div id="user" class="tab-pane fade in active">
+                <h3>User</h3>
+                <div class="row">
+                  
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                    <div class="flw">
+                      <h4>Account Information</h4>
+                      <ul>
+                        <li><span>Name&nbsp;&nbsp;:&nbsp;&nbsp;</span>Lars Herrik Erichsen</li>
+                        <li><span>Email&nbsp;&nbsp;:&nbsp;&nbsp;</span>larry@larry.no</li>
+                        <li><span>Password&nbsp;&nbsp;:&nbsp;&nbsp;</span>********  <a href="#">Change password</a></li>
+                      </ul>
+                    </div>
+                    <div class="payment-dis" id="step2" >
+                      <div class="flw">
+                        <h4>Billing Information</h4>
+                        <div class="bllling-info paypal">
+                          <ul>
+                            <li>Kortnummer **** **** **** 7591 </li>
+                            <li>Validate: 02 / 2018</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flw">
+                      <h4>Account Information</h4>
+                      <ul>
+                        <li><span>Name&nbsp;&nbsp;:&nbsp;&nbsp;</span>Lars Herrik Erichsen</li>
+                        <li><span>Email&nbsp;&nbsp;:&nbsp;&nbsp; </span>larry@larry.no</li>
+                        <li><span>Password&nbsp;&nbsp;:&nbsp;&nbsp;</span>********  <a href="#">Change password</a></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div></div>
+              <div id="system" class="tab-pane fade">
+                <h3>System</h3>
+				<ul>
+				<li>
+                <div class="button-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>System 1</button>
+                        <ul class="dropdown-menu device-dropdown-menu">
+                          <li><a href="#" class="small" data-value="Z-wave" tabIndex="-1"><input checked="checked" type="checkbox"/>&nbsp;Z-wave</a></li>
+                          <li><a href="#" class="small" data-value="Beckhofff" tabIndex="-1"><input type="checkbox"/>&nbsp;Beckhofff</a></li>
+                          <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
+                          <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
+                          <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
+                          <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
+                        </ul>
+						
+                          </div>
+				</li>
+				<li>
+                <div class="button-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>System 2</button>
+                        <ul class="dropdown-menu device-dropdown-menu">
+                          <li><a href="#" class="small" data-value="Z-wave" tabIndex="-1"><input checked="checked" type="checkbox"/>&nbsp;Z-wave</a></li>
+                          <li><a href="#" class="small" data-value="Beckhofff" tabIndex="-1"><input type="checkbox"/>&nbsp;Beckhofff</a></li>
+                          <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
+                          <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
+                          <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
+                          <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
+                        </ul>
+						
+                          </div>
+						</li>
+						</ul>
+                     <br>  <br>
+
+               </div>
+              <div id="charts" class="tab-pane fade">
+                <h3>Charts</h3>
+                <p>Some content in Charts.</p>
+				<ul>
+				<li>
+                <div class="button-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>Energy</button>
+                  <ul class="dropdown-menu device-dropdown-menu">
+                    <li><a href="#" class="small" data-value="Speedometer" tabIndex="-1"><input checked="checked" type="checkbox"/>&nbsp;Speedometer</a></li>
+                    <li><a href="#" class="small" data-value="KWh line chart" tabIndex="-1"><input type="checkbox"/>&nbsp;KWh line chart</a></li>
+
+                  </ul>
+				  </div>
+				  </li>
+				  <li> 
+				 <div class="button-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				   <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>Water</button>
+                  <ul class="dropdown-menu device-dropdown-menu">
+                    <li><a href="#" class="small" data-value="M3" tabIndex="-1"><input checked="checked" type="checkbox"/>&nbsp;M3</a></li>
+                    <li><a href="#" class="small" data-value="Realtime" tabIndex="-1"><input type="checkbox"/>&nbsp;Realtime</a></li>
+                    <li><a href="#" class="small" data-value="Speodmeter" tabIndex="-1"><input type="checkbox"/>&nbsp;Speodmeter</a></li>
+                    <li><a href="#" class="small" data-value="Histriore" tabIndex="-1"><input type="checkbox"/>&nbsp;Histriore</a></li>
+
+                  </ul>
+                </div>
+				</li>
+				</ul>
+              </div>
+            </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+	  </div>
+    </div><!-- /.modal -->
+  </footer>
+  <!-- footer Main End-->
+</body>
+<script src="js/config.js"></script>
+<script src="js/services/zwave/factories.js"></script>
+<script src="js/services/zwave/services.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/login.js"></script>
+<script src="js/controllers/powerviewer.js"></script>
+<script src="js/controllers/devicescontroller.js"></script>
+<script src="js/controllers/smartlab.js"></script>
+<script src="js/controllers/tabs.js"></script>
+<script src="js/controllers/contact.js"></script>
+<script src="js/controllers/menu_user.js"></script>
+<script src="js/controllers/mqtt.js"></script>
+<script src="js/controllers/powerhistory.js"></script>
+
+</html>

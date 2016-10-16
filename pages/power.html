@@ -1,0 +1,16 @@
+<div class="device-table" ng-controller="powerviewer">
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <highchart config="powerGauge" id="powerGauge" ng-if="data.loaded"></highchart>
+      <div ng-if="!data.loaded">
+        <span ng-hide="data.loaded">Loading Data...</span>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <highchart config="lastHourGraph" id="lastHourGraph" ng-if="data.loaded"></highchart>
+      <div ng-if="!data.loaded">
+        <span ng-hide="data.loaded">Loading Data...</span>
+      </div>
+    </div>
+  </div>
+</div>

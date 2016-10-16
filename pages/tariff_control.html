@@ -1,0 +1,61 @@
+<div class="device-table">
+  <h1 class="heading">Tariff Control
+    <span class="pull-right">
+      <a href="#" ng-click="update(devices)">
+        <img src="images/gird-veiw.png"/>
+      </a>
+    </span>
+  </h1>
+  <div class="table-responsive">
+    <form ng-show="devices_db.length">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Priority</th>
+            <th>Zwave ID</th>
+            <th>Name</th>
+            <th>Threshold Off (Minutes)</th>
+            <th>Threshold On (Minutes)</th>
+            <th>On/Off</th>
+          </tr>
+        </thead>
+        <tbody ng-model="devices_db" ui-sortable="sortableOptions">
+          <tr ng-repeat="device in devices_db">
+            <td class="first">
+              <span class="wr-sign"></span>
+              {{$index}}
+            </td>
+            <td>{{device.zwave_id}}</td>
+            <td>{{device.name}}</td>
+            <td><input id="threshold_can_be_off_{{device.name}}" ng-change="update([device])" ng-model-options="{debounce: 500}" ng-model="device.threshold_can_be_off"/></td>
+            <td><input id="threshold_must_be_on_{{device.name}}" ng-change="update([device])" ng-model-options="{debounce: 500}" ng-model="device.threshold_must_be_on"/></td>
+            <td>
+              <toggle-switch class="switch-small" ng-change="update([device])" ng-model="device.enabled"></toggle-switch>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+<div class="device-table" ng-controller="mqtt" ng-if="false">
+  <h1 class="heading">Mqtt</h1>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Incoming</th>
+          <th>Outcoming</th>
+          <th>Url</th>
+        </tr>
+      </thead>
+      <tbody ng-model="devices_db">
+        <tr ng-repeat="device in devices_db">
+          <td>{{device.topic_incoming}}</td>
+          <td>{{device.topic_outgoing}}</td>
+          <td>{{device.url}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

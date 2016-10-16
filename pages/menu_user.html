@@ -1,0 +1,19 @@
+<md-menu ng-controller="menu_user">
+  <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+    <md-icon md-font-set="material-icons"> person </md-icon>
+  </md-button>
+  <md-menu-content width="4">
+    <md-menu-item>
+      <md-button>
+        <md-icon md-font-set="material-icons"> backup </md-icon>
+        Backup
+      </md-button>
+    </md-menu-item>
+    <md-menu-item>
+      <md-button>
+        <md-icon md-font-set="material-icons"> alarm </md-icon>
+        Alarm
+      </md-button>
+    </md-menu-item>
+  </md-menu-content>
+</md-menu>

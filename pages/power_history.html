@@ -1,0 +1,36 @@
+<div class="device-table" ng-controller="powerhistory">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="datepicker_begin">Initial Date</label>
+          <input date-time class="form-control" id="datepicker_begin" ng-model="date.begin" date-change="update" view="{{date.view}}" max-view="{{date.maxView}}"
+          min-view="{{date.minView}}" format="{{date.format}}" max-date="date.maxDate"/>
+        </div>
+        <div class="form-group">
+          <label for="datepicker_end">Final Date</label>
+          <input date-time class="form-control" id="datepicker_end" ng-model="date.end" date-change="update" view="{{date.view}}" max-view="{{date.maxView}}"
+          min-view="{{date.minView}}" format="{{date.format}}" max-date="date.maxDate"/>
+        </div>
+        <div class="form-group">
+          <label for="granularity">Granularity</label>
+          <select class="form-control" id="granularity"
+              ng-change="update()"
+              ng-options="view for view in date.granularity"
+              ng-model="date.minView">
+          </select>
+        </div>
+        <div class="form-group" style="float:right">
+          Zoom out
+          <a>
+            <img ng-click="zoomout()" src="images/search-icon.png"/>
+          </a>
+        </div>
+      </div>
+    </form>
+    <highchart config="powerStory" id="powerStory" ng-if="data.loaded"></highchart>
+    <div ng-if="!data.loaded">
+      <span ng-hide="data.loaded">Loading Data...</span>
+    </div>
+  </div>
+</div>
